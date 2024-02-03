@@ -34,8 +34,8 @@
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
 
-    --black: #000;
-    --pink: #ff3258;
+    --black: #212326;
+    --pink: #3dc1c8;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -261,7 +261,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link__text {
-    position: relative;
+    position: flex;
     display: inline-block;
     padding: .6rem;
     color: inherit;
@@ -462,12 +462,18 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.work__links {
+.social__links {
     display: flex;
+    flex: 100% 100% 30%;
     align-items: center;
 }
 
 .work__text {
+    flex: 0 0 30%;
+}
+
+.work__links {
+    display: flex;
     flex: 0 0 30%;
 }
 
@@ -478,9 +484,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__code {
-    display: block;
+    display: flex;
     height: 3rem;
     margin-left: var(--gutter-normal);
+    margin-right: var(--gutter-normal);
     transition: all .3s;
 }
 
