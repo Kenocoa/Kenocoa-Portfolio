@@ -52,6 +52,9 @@
     --gutter-small: 2rem;
 
     --border-light: 1px solid rgb(36, 35, 35);
+
+    --vid-width:100%;
+    --vid-height:298;
 }
 
 html {
@@ -461,14 +464,53 @@ body:not(.user-is-tabbing) a:focus {
     transition: all .3s;
 }
 
-.gallery__social-link-item:hover {
+/* Create four equal columns that floats next to each other */
+.Social_link_column {
+    float: left;
+    width: 20%;
+    border:7px inset var(--pink); padding:12px; margin:5px;
+    margin-right: var(--gutter-small);
+    margin-bottom: var(--gutter-normal);
+    align-items: center;
+    transition: all .3s;
+}
+
+.Social_link_image {
+    height: 4rem;
+}
+
+.Social_link_column:hover {
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 500px) {
-  .gallery__social-link-item {
-    flex: 20%;
+.Social_link_box {
+  margin-left: 10rem;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+   clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .Social_link_column {
+    width: 40%;
   }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 750px) {
+  .Social_link_column {
+    width: 100%;
+  }
+  .Social_link_box {
+  margin-left: 0;
+  }
+  --vid-width:100%
+  --vid-height:200
 }
 
 @media(max-width: 900px) {
@@ -559,12 +601,6 @@ body:not(.user-is-tabbing) a:focus {
   }
 }
 
-@media(max-width: 600px) {
-  .video_column {
-    width: 100%;
-  }
-}
-
 .stream_image {
     display: flex;
     margin-left: auto;
@@ -578,6 +614,7 @@ body:not(.user-is-tabbing) a:focus {
 .stream_image:hover {
     transform: scale(1.05);
 }
+
 
 /* --------------------------------------- */
 /* ----- Clients ----- */
