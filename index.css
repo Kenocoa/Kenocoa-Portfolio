@@ -363,7 +363,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-@media(max-width: 300px) {
+@media(max-width: 500px) {
     .nav {
         font-size: var(--font-size-small);
     }
@@ -467,7 +467,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media screen and (max-width: 500px) {
   .gallery__social-link-item {
-    flex: 100%;
+    flex: 20%;
   }
 }
 
@@ -545,10 +545,6 @@ body:not(.user-is-tabbing) a:focus {
   padding: 4rem;
 }
 
-.video_box {
-    border:7px inset var(--pink); padding:1rem; margin:0px
-}
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -558,6 +554,12 @@ body:not(.user-is-tabbing) a:focus {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1350px) {
+  .video_column {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
   .video_column {
     width: 100%;
   }
