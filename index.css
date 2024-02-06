@@ -343,6 +343,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav__items {
     display: flex;
+    position: fixed;
     list-style: none;
 }
 
@@ -399,6 +400,7 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
+
 /* --------------------------------------- */
 /* ----- Header ----- */
 /* --------------------------------------- */
@@ -437,12 +439,36 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Work ----- */
+/* ----- Galleries----- */
 /* --------------------------------------- */
 
 .work__box {
     display: flex;
     align-items: center;
+}
+
+.gallery__social-links {
+    display: flex;
+    justify-content: center;
+    padding: var(--gutter-normal) 0;
+    list-style: none;
+}
+
+.gallery__social-link-item:not(:last-of-type) {
+    margin-right: var(--gutter-small);
+    border:7px inset var(--pink); padding:12px; margin:5px
+    justify-content: center;
+    transition: all .3s;
+}
+
+.gallery__social-link-item:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 500px) {
+  .gallery__social-link-item {
+    flex: 100%;
+  }
 }
 
 @media(max-width: 900px) {
@@ -510,6 +536,45 @@ body:not(.user-is-tabbing) a:focus {
     .work__code {
         height: 4rem;
     }
+}
+
+/* Create two equal columns that floats next to each other */
+.video_column {
+  float: left;
+  width: 50%;
+  padding: 4rem;
+}
+
+.video_box {
+    border:7px inset var(--pink); padding:1rem; margin:0px
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1350px) {
+  .video_column {
+    width: 100%;
+  }
+}
+
+.stream_image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: top;
+    max-width: 80rem;
+    transition: all .3s;
+}
+
+.stream_image:hover {
+    transform: scale(1.05);
 }
 
 /* --------------------------------------- */
