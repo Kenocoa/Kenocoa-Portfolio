@@ -124,7 +124,8 @@ img {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     line-height: var(--line-height-small);
@@ -341,13 +342,14 @@ body:not(.user-is-tabbing) a:focus {
 .nav {
     display: flex;
     justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
+    padding: var(--gutter-small) 0;
 }
 
 .nav__items {
     display: flex;
     position: fixed;
     list-style: none;
+    z-index: 16;
 }
 
 .nav__item:not(:last-child) {
@@ -358,9 +360,15 @@ body:not(.user-is-tabbing) a:focus {
     .nav {
         justify-content: center;
     }
+    #navbar {
+      position: fixed; /* Make it stick/fixed */
+      top: 0; /* Stay on top */
+      width: 100%; /* Full width */
+      transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 450px) {
     .nav__item:not(:last-child) {
         margin-right: var(--gutter-normal);
     }
@@ -403,6 +411,16 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
+#navbar {
+  background-color: var(--black); /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  float: right;
+  display: block;
+  width: 100%; /* Full width */
+  z-index: 5;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
 
 /* --------------------------------------- */
 /* ----- Header ----- */
@@ -601,6 +619,14 @@ body:not(.user-is-tabbing) a:focus {
   }
 }
 
+@media(max-width: 500px) {
+    .video_column {
+        justify-content: center;
+        padding: 1rem;
+        padding_bottom: 4rem;
+    }
+}
+
 .stream_image {
     display: flex;
     margin-left: auto;
@@ -672,6 +698,13 @@ body:not(.user-is-tabbing) a:focus {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
     }
+}
+
+.TOS__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 2rem;
 }
 
 /* --------------------------------------- */
