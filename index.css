@@ -267,7 +267,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link__text {
-    position: flex;
+    position: relative;
     display: inline-block;
     padding: .6rem;
     color: inherit;
@@ -603,8 +603,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__code {
     display: flex;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
+    height: 4rem;
+    margin-left: var(--gutter-medium);
     margin-right: var(--gutter-normal);
     transition: all .3s;
 }
