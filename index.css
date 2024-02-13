@@ -739,6 +739,10 @@ body:not(.user-is-tabbing) a:focus {
     padding: 2rem;
 }
 
+.paddingTOS {
+    padding-left: 6rem;
+}
+
 /* --------------------------------------- */
 /* ----- Contact ----- */
 /* --------------------------------------- */
